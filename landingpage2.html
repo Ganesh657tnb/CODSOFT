@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> GANESH Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e1e2f;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .column {
+      flex: 1 1 30%;
+      background: white;
+      margin: 10px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .column:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .column h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .column p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #1e1e2f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #ff6f61;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #e4574d;
+    }
+
+    @media (max-width: 768px) {
+      .column {
+        flex: 1 1 100%;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to GANESH 3D</h1>
+    <p>We build future-ready tech solutions for everyone</p>
+    <button class="cta-button" onclick="showAlert()">Get Started</button>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="column" onclick="highlightCard(this)">
+        <h2>Innovative Products</h2>
+        <p>Our solutions are built with cutting-edge technology to solve real-world problems.</p>
+      </div>
+      <div class="column" onclick="highlightCard(this)">
+        <h2>Expert Team</h2>
+        <p>A passionate group of developers, designers, and dreamers behind every creation.</p>
+      </div>
+      <div class="column" onclick="highlightCard(this)">
+        <h2>Global Impact</h2>
+        <p>We aim to create a global impact through scalable and sustainable innovation.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GANESH. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showAlert() {
+      alert('Welcome to Kreotix Innovations! We're glad to have you.');
+    }
+
+    function highlightCard(card) {
+      card.style.backgroundColor = '#e0f7fa';
+      setTimeout(() => {
+        card.style.backgroundColor = 'white';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
